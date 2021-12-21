@@ -78,6 +78,7 @@ export const useFetch = (axiosParams: AxiosRequestConfig) => {
         fetchData();
 
         return () => controller.abort();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [url]);
 
     return { state };

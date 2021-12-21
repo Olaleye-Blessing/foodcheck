@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { StyledSection } from "../../pages/Home/StyledHome";
-import orderBg from "./../../assets/images/check.svg";
 
 export const StyledHeader = styled.header`
     margin-top: 3rem;

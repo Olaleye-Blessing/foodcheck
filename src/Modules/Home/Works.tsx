@@ -1,5 +1,4 @@
 import { FC } from "react";
-import { StyledSection } from "../../pages/Home/StyledHome";
 import { StyledWorks } from "./Styles";
 import works1 from "./../../assets/images/check.svg";
 
