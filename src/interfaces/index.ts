@@ -1,0 +1,42 @@
+export interface Ingredients {
+    text: string;
+    quantity: number;
+    measure: string;
+    food: string;
+    weight: number;
+    foodCategory: string;
+    foodId: string;
+    image: string;
+}
+
+export interface FoodImg {
+    url: string;
+    width: number;
+    height: number;
+}
+
+export interface Food {
+    uri: string;
+    label: string;
+    image: string;
+    images: {
+        THUMBNAIL: FoodImg;
+        SMALL: FoodImg;
+        REGULAR: FoodImg;
+    };
+    ingredientLines: string[];
+    ingredients: Ingredients[];
+}
+
+export interface FoodRes {
+    from: number;
+    to: number;
+    count: number;
+    links: Object;
+    hits: [
+        {
+            recipe: Food;
+            _links: Object;
+        }
+    ];
+}

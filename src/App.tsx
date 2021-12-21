@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { Navbar } from "./components";
-import { Home } from "./pages";
+import { Footer, Navbar } from "./components";
+import { Home, Recipes } from "./pages";
 import { General, Normalize, Reset } from "./styles/Index";
 
 function App() {
@@ -9,11 +9,13 @@ function App() {
             <Normalize />
             <Reset />
             <General />
-            <Navbar />
             <BrowserRouter>
+                <Navbar />
                 <Routes>
                     <Route path="/" element={<Home />} />
+                    <Route path="/recipes" element={<Recipes />} />
                 </Routes>
+                <Footer />
             </BrowserRouter>
         </>
     );
