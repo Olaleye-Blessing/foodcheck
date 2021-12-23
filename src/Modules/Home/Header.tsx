@@ -1,6 +1,7 @@
 import { FC } from "react";
 import { StyledHeader } from "./Styles";
 import headerBg from "./../../assets/images/header_bg.svg";
+import { Link } from "react-router-dom";
 
 const Header: FC = () => {
     return (
@@ -15,10 +16,13 @@ const Header: FC = () => {
                         need to worry again
                     </p>
                     <div className="header__links">
-                        <button className="btn">Get Started</button>
-                        <button className="btn btn__outline">
+                        <Link to="/recipes" className="btn">
+                            Get Started
+                        </Link>
+                        {/* <button className="btn">Get Started</button> */}
+                        {/* <button className="btn btn__outline">
                             Explore Menu
-                        </button>
+                        </button> */}
                     </div>
                 </div>
                 <figure className="header__bg" aria-hidden="true">
