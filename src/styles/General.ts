@@ -44,6 +44,15 @@ const General = createGlobalStyle`
         font-size: 1.8rem;
     }
 
+    body, #root {
+        min-height: 100vh;
+    }
+
+    #root {
+        display: flex;
+        flex-direction: column;
+    }
+
     h1,
     h2,
     h3,

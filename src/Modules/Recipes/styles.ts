@@ -61,6 +61,7 @@ export const StyledIngredients = styled.section<IStyled>`
 export const StyledForm = styled.form`
     position: relative;
     margin-top: 2rem;
+    width: max-content;
 
     input {
         appearance: none;
@@ -68,6 +69,7 @@ export const StyledForm = styled.form`
         padding: 0.7rem 4.2rem 1rem 1.2rem;
         border-radius: var(--border-rad-sm);
         z-index: 10;
+        max-width: 30rem;
     }
 
     button {
@@ -77,5 +79,7 @@ export const StyledForm = styled.form`
         transform: translateY(-50%);
         font-size: 1.2rem;
         z-index: 9;
+        color: var(--green-1);
+        font-weight: 600;
     }
 `;
