@@ -50,7 +50,10 @@ export const useFetch = (axiosParams: AxiosRequestConfig) => {
         const controller = new AbortController();
         const signal = controller.signal;
 
-        if (!url) return;
+        if (!url) {
+            console.log("no url");
+            return;
+        }
 
         const fetchData = async () => {
             dispatch({ type: "FETCHING" });

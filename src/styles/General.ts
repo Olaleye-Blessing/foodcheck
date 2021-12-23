@@ -8,13 +8,17 @@ const General = createGlobalStyle`
         --white-1: #d8d8d84a;
         --green-1: #0a8;
 
-        --font-body: 'Mulish', sans-serif;;
+        --overlay: #0007;
+
+        --font-body: 'Mulish', sans-serif;
         --font-headings: 'Bitter', serif;
 
         --border-rad-sm: 0.8rem;
 
         --shadow: 0 0.1rem 0.1rem hsl(0deg 0% 0% / 0.075);
         --shadow-last: 0 16px 16px hsl(0deg 0% 0% / 0.075);
+
+        --box-shadow-sm: var(--shadow), var(--shadow), var(--shadow-last);
         --box-shadow-md: var(--shadow), var(--shadow), var(--shadow), var(--shadow), var(--shadow-last);
     }
 
@@ -108,6 +112,19 @@ const General = createGlobalStyle`
     .container {
         padding-left: 2rem;
         padding-right: 2rem;
+    }
+
+    input {
+        width: 100%;
+        appearance: none;
+        border: 0.1rem solid;
+        font-family: inherit;
+        font-size: 100%;
+        outline: none;
+
+        &[type="search"]::-webkit-search-cancel-button {
+            display: none;
+        }
     }
 `;
 

@@ -26,6 +26,13 @@ export interface Food {
     };
     ingredientLines: string[];
     ingredients: Ingredients[];
+    source: string;
+    id: string;
+}
+
+export interface Recipe {
+    recipe: Food;
+    _links: Object;
 }
 
 export interface FoodRes {
@@ -33,10 +40,5 @@ export interface FoodRes {
     to: number;
     count: number;
     links: Object;
-    hits: [
-        {
-            recipe: Food;
-            _links: Object;
-        }
-    ];
+    hits: Recipe[];
 }
