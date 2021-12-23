@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { StyledSection } from "../../pages/Home/StyledHome";
+import { device } from "../../styles/breakpoints";
 
 export const StyledHeader = styled.header`
     margin-top: 3rem;
@@ -7,16 +8,23 @@ export const StyledHeader = styled.header`
     padding-top: 8rem;
     padding-bottom: 5rem;
 
-    h1,
-    p {
-        margin-bottom: 1.5rem;
-    }
+    .header {
+        &__head,
+        &__para {
+            margin-bottom: 1.5rem;
+            max-width: 40rem;
+        }
 
-    div {
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        flex-flow: row wrap;
+        &__links {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            flex-flow: row wrap;
+        }
+
+        &__bg {
+            display: none;
+        }
     }
 
     button {
@@ -26,18 +34,47 @@ export const StyledHeader = styled.header`
             margin-right: 2rem;
         }
     }
+
+    @media screen and (${device.mobileL}) {
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .header {
+            &__content {
+                width: 100%;
+                flex: 3;
+            }
+            &__bg {
+                flex: 2;
+                display: block;
+                max-width: 40rem;
+            }
+        }
+    }
+
+    @media screen and (${device.laptop}) {
+        min-height: calc(100vh - 17rem);
+        display: flex;
+        padding: 0;
+    }
 `;
 
 export const StyledPopular = styled(StyledSection)`
     background-color: var(--white-1);
+    padding-top: 8rem;
+    padding-bottom: 8rem;
 
     ul {
-        margin-top: 4rem;
         display: flex;
         align-items: center;
         justify-content: space-around;
         flex-wrap: wrap;
         flex: 1;
+        max-width: 54rem;
+        margin: 4rem auto 0rem;
     }
 
     li {
@@ -64,16 +101,23 @@ export const StyledPopular = styled(StyledSection)`
 
 export const StyledWorks = styled(StyledSection)`
     ul {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-flow: row wrap;
+        gap: 3rem;
+        margin-bottom: 4rem;
     }
 
     li {
+        width: 100%;
         text-align: center;
-        margin-top: 4rem;
-        margin-bottom: 5rem;
         padding: 2.5rem 0.2rem 4rem;
         box-shadow: var(--box-shadow-md);
         background-color: transparent;
         border-radius: var(--border-rad-sm);
+        max-width: 28rem;
+        margin: 4rem auto 0rem;
 
         figure {
             width: 100%;

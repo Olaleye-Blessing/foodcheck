@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import { device } from "./breakpoints";
 
 const General = createGlobalStyle`
     :root {
@@ -105,13 +106,32 @@ const General = createGlobalStyle`
 
     }
 
-    img {
+    img, svg {
         max-width: 100%;
     }
 
     .container {
         padding-left: 2rem;
         padding-right: 2rem;
+        max-width: 100rem;
+        margin-right: auto;
+        margin-left: auto;
+
+        @media screen and (${device.mobileL}) {
+            padding-left: 3rem;
+            padding-right: 3rem;
+        }
+
+        @media screen and (${device.tablet}) {
+            padding-left: 4rem;
+            padding-right: 4rem;
+        }
+
+        @media screen and (${device.mobileL}) {
+            padding-left: 3rem;
+            padding-right: 3rem;
+        }
+
     }
 
     input {

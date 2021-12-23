@@ -6,10 +6,10 @@ import { General, Normalize, Reset } from "./styles/Index";
 function App() {
     return (
         <>
-            <Normalize />
-            <Reset />
-            <General />
             <BrowserRouter>
+                <Normalize />
+                <Reset />
+                <General />
                 <Navbar />
                 <Routes>
                     <Route path="/" element={<Home />} />
