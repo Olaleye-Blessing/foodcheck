@@ -8,7 +8,7 @@ interface IIngredients {
 
 const Recipe: FC<IIngredients> = ({ image, ingedientLines }) => {
     return (
-        <StyledIngredients bgImage={image}>
+        <StyledIngredients bgImage={image} data-testid="ingredient">
             <ol>
                 {ingedientLines.map((ing, i) => (
                     <li key={i}>{ing}</li>

@@ -29,7 +29,7 @@ const Index: FC<Modal> = ({ children, closeModal, title }) => {
     }, []);
 
     return (
-        <StyledModal>
+        <StyledModal data-testid="modal">
             <div>
                 <ModalHeader title={title} closeModal={closeModal} />
                 <section className="modal__body">{children}</section>

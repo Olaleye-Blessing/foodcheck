@@ -10,7 +10,7 @@ const ResultRecipe: FC<IRecipe> = ({ recipe, handleViewRecipe }) => {
     let id = recipe.uri.slice(53);
 
     return (
-        <StyledResultRecipe>
+        <StyledResultRecipe data-testid={`food-result-${id}`}>
             <figure>
                 <img src={recipe.image} alt={``} />
             </figure>

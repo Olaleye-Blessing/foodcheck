@@ -14,6 +14,7 @@ const Form: FC<IForm> = ({ food, hanldeSearch, setFood }) => {
                 e.preventDefault();
                 hanldeSearch();
             }}
+            role="search"
         >
             {/* <div> */}
             <input
