@@ -27,7 +27,6 @@ export interface Food {
     ingredientLines: string[];
     ingredients: Ingredients[];
     source: string;
-    id: string;
 }
 
 export interface Recipe {
